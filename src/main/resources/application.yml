@@ -1,0 +1,20 @@
+#   #数据库连接配置
+spring:
+  datasource:
+    driverClassName: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://test:3306/test?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=GMT
+    %2B8
+    username: test
+    password: test
+
+# 数据库生成文档配置
+screw:
+  version: 1.0   # 生成文档的版本
+  description: 这是一个文档API # 生成文档描述
+  outputDir: F:\数据库文档 # 本地输出地址
+  openAfterComplete: true # 生成后是否打开生成路径
+  fileType: MD  # 生成的类型（支持HTML，MD，WORD）
+  ignoreTableName: [ ] # 忽略的表名，不指定默认生成全部
+  ignorePrefix: [ ] # 忽略的表的前缀，不指定默认生成全部
+  ignoreSuffix: [ ] # 忽略的表的后缀，不指定默认生成全部
+  customTableName: [ "bigcustomerbenefit", "contractinfo", "contractinbigcustomer" ] # 指定要生成的表，不指定默认生成全部
